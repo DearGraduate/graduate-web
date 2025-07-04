@@ -1,13 +1,9 @@
+@import './styles/fonts.css';
+
+/* 전역 스타일 설정 (Pretendard를 기본으로) */
 body {
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 500; /* 기본 Medium으로 고정 */
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
