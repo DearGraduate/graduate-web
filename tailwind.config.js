@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: ['./src/**/*.{js,ts,jsx,tsx}', './public/index.html'],
   theme: {
     extend: {
       colors: {
         main: '#4A6350',
-        line: '#0B4D1B',
+        line: '#EAFFEF',
         letterBox: '#F7F7F7',
         sub: {
           yellow: '#FFE99C',

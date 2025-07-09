@@ -55,11 +55,3 @@
 }
 
 
-/* 
-사용방법 예시 
-<p style={{ fontFamily: 'Pretendard', fontWeight: 300 }}>Light (300)</p>
-<p style={{ fontFamily: 'Pretendard', fontWeight: 400 }}>Regular (400)</p>
-<p style={{ fontFamily: 'Pretendard', fontWeight: 700 }}>Bold (700)</p>
-
-<h1 style={{ fontFamily: 'Ydestreet', fontWeight: 'normal' }}></h1>
-*/
