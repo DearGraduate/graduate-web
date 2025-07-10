@@ -3,6 +3,10 @@ import RootLayout from "../layouts/RootLayout";
 import Notfound from "../pages/NotFound";
 import CustomButton from "../components/common/button";
 import CustomLottie from "../components/Lotties/CustomLottie";
+import AlbumMakingPage from "../pages/AlbumMakingPage";
+import MyAlbum from "../pages/MyalbumPage";
+import SharePage from "../pages/SharePage";
+
 
 const router = createBrowserRouter([
     {
@@ -41,18 +45,18 @@ const router = createBrowserRouter([
             },
             {   //메이킹페이지
                 path: '/making',
-                //element:
+                element: <AlbumMakingPage />
             },
             {
                 //마이앨범페이지
-                //딴소리 : 뷰 추가되는거 봐야 알 것 같은데 my라해도 괜찮을거같아요 
                 path: '/myalbum',
-                //element:
+                element: <MyAlbum />
+                
             },
             {
                 //쉐어링페이지
                 path: '/sharing',
-                //element:
+                element: <SharePage />
             },
             {
                 //다운로딩페이지
