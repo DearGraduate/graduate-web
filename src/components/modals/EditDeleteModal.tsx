@@ -2,8 +2,8 @@ import { Sheet, SheetRef } from "react-modal-sheet";
 import { useRef, useState } from "react";
 import type { ModalProps } from "../../types/Modal";
 import CustomButton from "../common/button";
-export const SHEET_SNAP_POINTS = [0.25, 0.5, 0];
-export const SHEET_INITIAL_SNAP = 0;
+export const SHEET_SNAP_POINTS = [0.7, 0.5, 0.3];
+export const SHEET_INITIAL_SNAP = 2;
 
 const EditDeleteBottomSheet = ({ isOpen, onRequestClose }: ModalProps) => {
     const ref = useRef<SheetRef>(null);
@@ -17,10 +17,11 @@ const EditDeleteBottomSheet = ({ isOpen, onRequestClose }: ModalProps) => {
             onSnap={setSnapPoint}
             snapPoints={SHEET_SNAP_POINTS}
             initialSnap={SHEET_INITIAL_SNAP}
+            
         >
             <Sheet.Backdrop onTap={onRequestClose} />
             <Sheet.Container
-                className="bg-white rounded-t-[40px] h-[10vh] w-full"
+                className="bg-white rounded-t-[40px] h-[15vh] w-full"
             >
                 <Sheet.Header />
                 <Sheet.Content>
