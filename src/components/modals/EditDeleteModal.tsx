@@ -1,17 +1,22 @@
 import { Sheet, SheetRef } from "react-modal-sheet";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import type { ModalProps } from "../../types/Modal";
 import CustomButton from "../common/button";
+export const SHEET_SNAP_POINTS = [0.25, 0.5, 0];
+export const SHEET_INITIAL_SNAP = 0;
 
 const EditDeleteBottomSheet = ({ isOpen, onRequestClose }: ModalProps) => {
     const ref = useRef<SheetRef>(null);
+    const [, setSnapPoint] = useState<number>(SHEET_INITIAL_SNAP);
 
     return (
         <Sheet
             isOpen={isOpen}
             onClose={onRequestClose}
             ref={ref}
-            snapPoints={[0.25]}
+            onSnap={setSnapPoint}
+            snapPoints={SHEET_SNAP_POINTS}
+            initialSnap={SHEET_INITIAL_SNAP}
         >
             <Sheet.Backdrop onTap={onRequestClose} />
             <Sheet.Container
@@ -23,12 +28,12 @@ const EditDeleteBottomSheet = ({ isOpen, onRequestClose }: ModalProps) => {
                         <h3
                             style={{ fontFamily: 'Ydestreet', fontWeight: '700' }}
                             className="text-lg font-semibold mb-6 w-full whitespace-nowrap text-center text-black">
-                                축하글을 수정하거나 삭제하시겠어요?</h3>
+                            축하글을 수정하거나 삭제하시겠어요?</h3>
 
                         <div className="flex flex-row justify-center gap-[10px]">
                             <CustomButton
                                 className="px-[15px] py-[15px] w-fit whitespace-nowrap text-center"
-                                >축하글 수정하기</CustomButton>
+                            >축하글 수정하기</CustomButton>
                             <CustomButton
                                 className="px-[15px] py-[15px] w-fit whitespace-nowrap text-center"
                             >축하글 삭제하기</CustomButton>
